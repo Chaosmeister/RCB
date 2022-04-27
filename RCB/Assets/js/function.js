@@ -6,8 +6,8 @@ KB.on('dom.ready', function() {
             item.style.height = "200px"
         }
         
-        if (item.scrollWidth > 500) {
-            item.style.width = "500px"
+        if (item.scrollWidth > 1000) {
+            item.style.width = "1000px"
         }
     }
 });
