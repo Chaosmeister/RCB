@@ -1,3 +1,4 @@
 pre {
-    resize:both
+    resize:both;
+    max-width: 80vw;
 }
