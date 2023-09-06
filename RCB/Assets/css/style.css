@@ -1,4 +1,11 @@
 pre {
-    resize:both;
-    max-width: 80vw;
+    resize: both;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+code > button{
+  position: sticky;
+  top: 0px;
+  left: 100%;
 }
