@@ -6,6 +6,6 @@ pre {
 
 code > button{
   position: sticky;
-  top: 0px;
   left: 100%;
+  bottom: calc(100% - 22px);
 }

@@ -24,7 +24,7 @@ KB.on('dom.ready', function () {
                 let button = document.createElement("button");
     
                 button.innerText = copyButtonLabel;
-                code.prepend(button);
+                code.append(button);
                 button.addEventListener("click", async () => {
                     await copyCode(code, button);
                 });
