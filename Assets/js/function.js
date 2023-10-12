@@ -1,7 +1,7 @@
 const copyButtonLabel = "Copy";
 
 async function copyCode(code, button) {
-    let text = code.innerText.substring(button.innerText.length);
+    let text = code.innerText.substring(0, code.innerText.length - button.innerText.length);
 
     await navigator.clipboard.writeText(text);
 
