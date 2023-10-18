@@ -33,4 +33,19 @@ KB.on('dom.ready', function () {
             }
         }
     }
+
+    for (let table of [...document.getElementsByTagName("table")]) {
+        
+        if (table.classList.length == 0 && table.scrollHeight > 200) {
+            let div = document.createElement("div");
+            div.style.height = "400px";
+            div.style.overflow = "auto";
+
+            table.parentNode.append(div);
+            table.firstElementChild.style.position = "sticky";
+            table.firstElementChild.style.insetBlockStart = "-1px";
+
+            div.append(table);
+        }
+    }
 });
