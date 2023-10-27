@@ -41,7 +41,7 @@ KB.on('dom.ready', function () {
             div.style.height = "400px";
             div.style.overflow = "auto";
 
-            table.parentNode.append(div);
+            table.parentNode.insertBefore(div, table);
             table.firstElementChild.style.position = "sticky";
             table.firstElementChild.style.insetBlockStart = "-1px";
 
