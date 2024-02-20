@@ -2,10 +2,12 @@ pre {
     resize: both;
     white-space: pre-wrap;
     word-break: break-all;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 code > button{
   position: sticky;
-  left: 100%;
+  left: calc(100% - 50px);
   bottom: calc(100% - 22px);
 }
