@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\RCB;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base
 {
@@ -12,6 +13,11 @@ class Plugin extends Base
         $this->hook->on('template:layout:js', array('template' => 'plugins/RCB/Assets/js/function.js'));
     }
 
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+    }
+
     public function getPluginName()
     {
         return 'Resizable codeblocks';
@@ -19,7 +25,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return 'Make codeblocks resizable, scrollable and limit their initial height to 200 pixels';
+        return t('Make codeblocks resizable, scrollable and limit their initial height to 200 pixels');
     }
 
     public function getPluginAuthor()
